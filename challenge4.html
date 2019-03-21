@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 4</title>
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <style>
+    body{
+        margin: 2%;
+        border: 1px solid black;
+        background-color: #fffdcb;
+    }
+    #image{
+        line-height:325px;
+        width: 388px;
+        height: 325px;
+        border:5px solid black;
+        margin:0 auto;
+        background-repeat: no-repeat;
+        color:#FFFFFF;
+        text-align: center;
+        background-color: #008600;
+        background-size: 100%;
+        margin-bottom:25px;
+        font-size:150%;
+    }
+    .preview{
+        width:10%;
+        margin-left:17%;
+        margin-bottom:3%;
+        border: 10px solid black;
+    }
+    img{
+        width:95%;
+    }
+    h1{
+        text-align: center;
+        font-family: 'Anton', sans-serif;
+    }
+    h2{
+        text-align: center;
+        font-family: 'Anton', sans-serif;
+    }
+    </style>
+
+    <script>
+      function upDate(previewPic){
+        console.log(previewPic)
+        var imageSrc = previewPic.getAttribute("src");
+        var altSrc = previewPic.getAttribute("alt");
+        document.querySelector("#image").style.backgroundImage = "url("+imageSrc+")";
+        document.querySelector("#image").innerHTML = altSrc;
+ /* In this function you should
+    1) change the url for the background image of the div with the id = "image"
+    to the source file of the preview image
+
+    2) Change the text  of the div with the id = "image"
+    to the alt text of the preview image
+    */
+
+      }
+      function unDo(goAway){
+        var goAway = document.querySelector("#image");
+        console.log(goAway)
+        goAway.style.backgroundImage = "none";
+        document.querySelector("#image").innerHTML = "Get inspired.";
+     /* In this function you should
+    1) Update the url for the background image of the div with the id = "image"
+    back to the orginal-image.  You can use the css code to see what that original URL was
+
+    2) Change the text  of the div with the id = "image"
+    back to the original text.  You can use the html code to see what that original text was
+    */
+		  }
+
+      function blur(fuzzy){
+
+      }
+    </script>
+</head>
+
+<body>
+    <h1>Challenge 4</h1>
+    <h2>Motivational Quotes by Leslie Knope</h2>
+        <div id = "image">
+            Get inspired.
+        </div>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "1"
+            alt = "&quot;Waffles. Friends. Work.&quot;"
+            src = "https://user-images.githubusercontent.com/46728573/54727494-7a209a00-4b4e-11e9-98f4-d82417cbe0f6.jpg" onmouseover = "upDate(this)" onmouseleave = "unDo(this)" onfocus="upDate(this)" onblur="unDo()";>
+
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "2"
+            alt = "&quot;Hang in there. I love you. Bye.&quot;"
+            src = "https://user-images.githubusercontent.com/46728573/54727493-7a209a00-4b4e-11e9-936c-043905e78851.jpg" onmouseover = "upDate(this)" onmouseleave = "unDo()" onfocus="upDate(this)" onblur="unDo()";>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "3"
+            alt = "&quot;Uteruses before duderuses.&quot;"
+            src = "https://user-images.githubusercontent.com/46728573/54727492-7a209a00-4b4e-11e9-8de3-af0013867db4.jpg" onmouseover = "upDate(this)" onmouseleave = "unDo()" onfocus="upDate(this)" onblur="unDo()";>
+
+            <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "4"
+            alt = "&quot;Do it. Fierce. Power.&quot;"
+            src = "https://user-images.githubusercontent.com/46728573/54727865-a89f7480-4b50-11e9-928e-89133358c801.jpg" onmouseover = "upDate(this)" onmouseleave = "unDo(this)" onfocus="upDate(this)" onblur="unDo()";>
+
+
+            <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "5"
+            alt = "&quot;I am often inspired by myself.&quot;"
+            src = "https://user-images.githubusercontent.com/46728573/54727866-a89f7480-4b50-11e9-82bc-21dcee2011a4.png" onmouseover = "upDate(this)" onmouseleave = "unDo()" onfocus="upDate(this)" onblur="unDo()";>
+
+            <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "6"
+            alt = "&quot;You have all the strengths.&quot;"
+            src = "https://user-images.githubusercontent.com/46728573/54727867-a9380b00-4b50-11e9-860e-d07235090cce.png" onmouseover = "upDate(this)" onmouseleave = "unDo()" onfocus="upDate(this)" onblur="unDo()";>
+
+</body>
+</html>
